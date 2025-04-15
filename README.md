@@ -6,9 +6,9 @@ With Terraform, you can automate infrastructure deployment across a wide variety
 Terraform enables teams to version, reuse, and collaborate on infrastructure just like they do with application code. Although it was initially open-source and remains so at its core, HashiCorp introduced licensing changes in 2023 after being acquired by IBM, impacting some commercial features.
 
 
-#Installation & Set-up
+# Installation & Set-up
 
-## 📦 Pre-Requisites
+## Pre-Requisites
 
 ### 1. Install Terraform
 
