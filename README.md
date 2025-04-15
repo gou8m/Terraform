@@ -25,5 +25,60 @@ Terraform enables teams to version, reuse, and collaborate on infrastructure jus
 
 To verify the installation:
 
-```bash
+Open CMD and run
 terraform --version
+
+### 2. Install Visual Studio Code
+
+- Download from: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- Install extensions:
+  - **HashiCorp Terraform**
+  - **HashiCorp HCL**
+
+---
+
+## 🔐 AWS CLI Configuration
+
+To allow Terraform to authenticate with AWS, install and configure the AWS CLI:
+
+### Install AWS CLI:
+
+- Download: [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/)
+
+### Configure AWS credentials:
+
+```bash
+aws configure
+```
+
+You’ll be prompted to enter:
+
+- **AWS Access Key ID**
+- **AWS Secret Access Key**
+- **Default region name** (e.g., `us-east-1`)
+- **Default output format** (you can just press Enter to skip)
+
+Terraform will use these credentials when interacting with AWS resources.
+
+---
+
+## Basic Terraform Commands
+
+```bash
+terraform init      # Initialize the required plugins from the Terraform registry
+terraform plan      # Show the execution plan without making changes
+terraform apply     # Apply the changes required to reach the desired state
+terraform destroy   # Destroy the created infrastructure
+```
+
+---
+
+## Terraform File Structure
+
+| File               | Description                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| `provider.tf`       | Defines cloud provider details (e.g., AWS region, credentials)             |
+| `main.tf`           | Main configuration file where resources (like EC2, S3) are declared        |
+| `variables.tf`      | Declares input variables used across Terraform files                       |
+| `terraform.tfvars`  | Supplies actual values to the declared variables                           |
+| `output.tf`         | Defines outputs such as IP addresses, DNS names, etc.   
